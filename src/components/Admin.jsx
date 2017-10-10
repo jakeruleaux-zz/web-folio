@@ -1,10 +1,12 @@
 import React from 'react';
-import validator from 'validator';
+
+import Login from './Login';
 
 function Admin () {
   return (
     <div>
       admin
+      <Login />
     </div>
   )
 }

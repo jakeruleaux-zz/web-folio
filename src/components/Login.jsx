@@ -3,7 +3,7 @@ import Input from 'react-validation/build/input';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import c from './../constants';
+
 import { v4 } from 'uuid';
 
 class Login extends React.Component {
@@ -22,13 +22,29 @@ class Login extends React.Component {
       id: v4()
     }
     dispatch(action);
-    
+
   }
   render () {
     return (
       <div>
-
+        <form onSubmit={this.handleLogIn}>
+          <label>User Name: </label>
+          <input
+            ref='username'
+            type='text'
+            id='username'/>
+          <label>Password: </label>
+          <input
+            ref='password'
+            type='text'
+            id='password'/>
+          <button type='submit'>Enter</button>
+        </form>
       </div>
     )
   }
 }
+
+Login = connect()(Login);
+
+export default Login;
