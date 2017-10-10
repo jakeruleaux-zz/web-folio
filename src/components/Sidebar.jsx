@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Sidebar from 'react-bootstrap-sidebar';
+import {Navbar, Nav, NavItem} from 'react-bootstrap'; 
 
 function Sidebar (props) {
   return (
