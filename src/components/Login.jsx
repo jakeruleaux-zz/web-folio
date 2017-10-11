@@ -3,6 +3,7 @@ import Input from 'react-validation/build/input';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import c from './../constants';
 
 import { v4 } from 'uuid';
 
@@ -10,6 +11,8 @@ class Login extends React.Component {
 
   constructor (props) {
     super(props);
+
+    this.handleLogIn = this.handleLogIn.bind(this);
   }
 
   handleLogIn () {
@@ -22,7 +25,7 @@ class Login extends React.Component {
       id: v4()
     }
     dispatch(action);
-
+    
   }
   render () {
     return (

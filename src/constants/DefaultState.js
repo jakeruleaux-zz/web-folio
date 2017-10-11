@@ -1,4 +1,4 @@
 export const defaultState = {
-  username : jakeruleaux,
-  password: test4me
+  username : 'jakeruleaux',
+  password: 'test4me'
 };
